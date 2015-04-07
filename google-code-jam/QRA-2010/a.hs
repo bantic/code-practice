@@ -16,15 +16,9 @@ main = do
   writeFile "out.txt" $ unlines indexedCases
   putStrLn $ unlines indexedCases
 
-
 solve :: [String] -> [String]
 solve [] = []
 solve xs = solveOne (take 3 xs) : solve (drop 3 xs)
---  let itemCount = (read :: Int) itemCountS
---  let pricesWords = words pricesS
---  let prices = map (read :: String->Int) pricesWords
---  let credit = (read creditS) :: Int
---  let itemCount = (read itemCountS) :: Int
 
 readInt n = read n :: Int
 
